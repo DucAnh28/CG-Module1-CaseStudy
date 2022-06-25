@@ -1,20 +1,21 @@
-class Apple{
-    constructor() {
-        let isTouching
-        while (true){
-            isTouching = false;
-            this.x = Math.floor(Math.random()* canvas.width /snake.size) * snake.size
-            this.y = Math.floor(Math.random()* canvas.height /snake.size) * snake.size
-            for (let i = 0; i < snake.tail.length; i++) {
-                if (this.x == snake.tail[i].x && this.y == snake.tail[i].y){
-                    isTouching = true
-                }
-            }
-            if (!isTouching){
-                break
-            }
-            this.color = "yellow";
-            this.size = snake.size
+function random_food(min, max) {
+    return Math.floor((Math.random() * (max - min) + min))
+}
+
+function make_Apple() {
+    apple_x = random_food(0, canvas.width - 10)
+    apple_y = random_food(0, canvas.height - 10)
+    snake.forEach(function appleEated(part) {
+        let eated = part.x == apple_x && part.y == apple_y;
+        if (eated) {
+            make_Apple()
         }
-    }
+    });
+}
+
+function drawApple() {
+    ctx.fillStyle = "lightgreen"
+    ctx.strokeStyle = "darkgreen"
+    ctx.fillRect(apple_x, apple_y, 20, 20)
+    ctx.strokeRect(apple_x, apple_y, 20, 20)
 }

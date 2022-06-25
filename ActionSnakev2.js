@@ -9,9 +9,9 @@ function changeDirection(event) {
     //     changeDirection = true;
     // }
     let keyPress = event.keyCode;
-    let goingUp = dy === -15;
+    let goingUp = dy === -20;
     let goingDown = dy === 20;
-    let goingLeft = dx === -15;
+    let goingLeft = dx === -20;
     let goingRight = dx === 20;
 
     if (keyPress === left && !goingRight) {
@@ -24,11 +24,11 @@ function changeDirection(event) {
     }
     if (keyPress === up && !goingDown) {
         dx = 0
-        dy = -15
+        dy = -20
     }
     if (keyPress === down && !goingUp) {
         dx = 0
-        dy = 15
+        dy = 20
     }
 }
 
@@ -40,9 +40,9 @@ function gameEnd() {
         }
     }
     let hitLeftWall = snake[0].x < 0
-    let hitRightWall = snake[0].x > canvas.width - 20;
+    let hitRightWall = snake[0].x > canvas.width ;
     let hitTopWall = snake[0].y < 0
-    let hitBottomWall = snake[0].y > canvas.height - 20;
+    let hitBottomWall = snake[0].y > canvas.height ;
     console.log("Trái " + hitLeftWall)
     console.log("Phải " + hitRightWall)
     console.log("Trên " + hitTopWall)

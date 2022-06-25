@@ -22,6 +22,7 @@ function main() {
         drawSnake();
         moveSnake();
         main();
+        drawApple();
     }, 100)
 }
 
@@ -39,12 +40,15 @@ function drawSnake() {
 function drawSnakePart(snakePart) {
     ctx.fillStyle = "lightblue"
     ctx.strokeStyle = "darkblue"
-    ctx.fillRect(snakePart.x, snakePart.y, 20, 15)
-    ctx.strokeRect(snakePart.x, snakePart.y, 20, 15)
+    ctx.fillRect(snakePart.x, snakePart.y, 20, 20)
+    ctx.strokeRect(snakePart.x, snakePart.y, 20, 20)
 }
 
 function moveSnake() {
     const head = {x: snake[0].x + dx, y: snake[0].y + dy};
     snake.unshift(head)
+    let snakeEatFood = snake[0].x === apple_x && snake[0].y === apple_y;
+
     snake.pop();
 }
+

@@ -12,4 +12,4 @@
 ### 25/6/2022
 - Tạo func di chuyển rắn
 - Tạo apple: x,y, size
-- 
+- draw apple ngẫu nhiên
