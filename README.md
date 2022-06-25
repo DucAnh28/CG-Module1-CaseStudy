@@ -7,6 +7,9 @@
   - Di chuyển theo hướng mũi tên bàn phím
 ### 24/6/2022
 - Vẽ thẻ canvas, tạo viền canvas
-- Tạo class snake: x,y, size, đuôi
-- Tạo class apple
-[//]: # (- Tạo func di chuyển rắn)
+- Tạo snake: x,y, size, đuôi
+- Vẽ snake
+### 25/6/2022
+- Tạo func di chuyển rắn
+- Tạo apple: x,y, size
+- 

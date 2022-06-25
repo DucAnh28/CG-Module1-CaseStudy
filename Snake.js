@@ -8,33 +8,33 @@ class Snake {
         this.rotateY = 1;
     }
     move (){
-        var newCircle;
+        let newRect;
         if (this.rotateX == 1){
-            newCircle = {
+            newRect = {
                 x: this.tail[this.tail.length - 1].x + this.size,
                 y: this.tail[this.tail.length - 1].y,
             }
         }
         else if (this.rotateX == -1){
-            newCircle = {
+            newRect = {
                 x: this.tail[this.tail.length - 1].x - this.size,
                 y: this.tail[this.tail.length - 1].y,
             }
         }
         else if (this.rotateY == 1){
-            newCircle = {
+            newRect = {
                 x: this.tail[this.tail.length - 1].x ,
                 y: this.tail[this.tail.length - 1].y + this.size,
             }
         }
         else if (this.rotateY == -1){
-            newCircle = {
+            newRect = {
                 x: this.tail[this.tail.length - 1].x ,
                 y: this.tail[this.tail.length - 1].y - this.size,
             }
         }
         this.tail.shift();
-        this.tail.push(newCircle)
+        this.tail.push(newRect)
     }
 }
 
