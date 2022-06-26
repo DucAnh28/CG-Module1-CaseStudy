@@ -33,16 +33,16 @@ function changeDirection(event) {
 }
 
 function gameEnd() {
-    for (let i = 4; i < snake.length; i++) {
+    for (let i = 3; i < snake.length; i++) {
         let hasCollided = snake[i].x === snake[0].x && snake[i].y === snake[0].y
         if (hasCollided) {
             return true;
         }
     }
-    let hitLeftWall = snake[0].x < 0
-    let hitRightWall = snake[0].x > canvas.width ;
-    let hitTopWall = snake[0].y < 0
-    let hitBottomWall = snake[0].y > canvas.height ;
+    let hitLeftWall = snake[0].x < -20
+    let hitRightWall = snake[0].x > canvas.width + 10;
+    let hitTopWall = snake[0].y < -20
+    let hitBottomWall = snake[0].y > canvas.height + 10;
     console.log("Trái " + hitLeftWall)
     console.log("Phải " + hitRightWall)
     console.log("Trên " + hitTopWall)

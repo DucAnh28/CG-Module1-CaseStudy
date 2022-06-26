@@ -13,3 +13,8 @@
 - Tạo func di chuyển rắn
 - Tạo apple: x,y, size
 - draw apple ngẫu nhiên
+### 26/6/2022
+- Tạo score
+- Tạo game end
+- fixing some bug
+- tired of bug !!
