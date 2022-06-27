@@ -39,14 +39,13 @@ function gameEnd() {
             return true;
         }
     }
-    let hitLeftWall = snake[0].x < -20
+    let hitLeftWall = snake[0].x < -20;
     let hitRightWall = snake[0].x > canvas.width + 10;
-    let hitTopWall = snake[0].y < -20
+    let hitTopWall = snake[0].y < -20;
     let hitBottomWall = snake[0].y > canvas.height + 10;
     // console.log("Trái " + hitLeftWall)
     // console.log("Phải " + hitRightWall)
     // console.log("Trên " + hitTopWall)
     // console.log("Dưới " + hitBottomWall)
     return hitTopWall || hitBottomWall || hitLeftWall || hitRightWall
-
 }

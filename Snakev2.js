@@ -10,8 +10,7 @@ main();
 document.addEventListener("keydown", changeDirection);
 
 function reset(){
-    clearTimeout();
-    main();
+    document.location.reload();
 }
 
 function main() {
@@ -49,11 +48,21 @@ function drawSnakePart(snakePart) {
 function moveSnake() {
     const head = {x: snake[0].x + dx, y: snake[0].y + dy};
     snake.unshift(head)
-    let snakeEatFood = snake[0].x === apple_x && snake[0].y === apple_y;
+    var snakeEatFood = snake[0].x === apple_x && snake[0].y === apple_y;
     if (snakeEatFood) {
         score++;
         document.getElementById("score").innerHTML = "Score: " + score;
-        make_Apple()
+        divi20x = random_apple(0,canvas.width);
+        divi20y = random_apple(0,canvas.height);
+        while (divi20x % 20 != 0) {
+            divi20x = random_apple(0, canvas.width - 20);
+            console.log(divi20x)
+        }
+        while (divi20y % 20 != 0) {
+            divi20y = random_apple(0, canvas.height - 20);
+            console.log(divi20y)
+        }
+        make_Apple();
     } else {
         snake.pop();
     }
