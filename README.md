@@ -18,3 +18,5 @@
 - Tạo game end
 - fixing some bug
 - tired of bug !!
+### 27/6/2022
+-Hoàn thành
